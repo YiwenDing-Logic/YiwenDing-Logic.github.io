@@ -1,35 +1,122 @@
+/* Global */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  color: #333;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #2e4633;
+  background: #f4f8f5;
+  line-height: 1.6;
 }
 
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header nav a {
-  color: #fff;
+a {
+  color: #2b8a5f;
   text-decoration: none;
-  margin-left: 1rem;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-section {
-  padding: 2rem;
-  width: 80%;
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
   margin: auto;
 }
 
+/* Header */
+.hero {
+  background: linear-gradient(135deg, #e1f6e9, #cdefdb);
+  padding: 50px 0;
+  border-bottom: 1px solid #b8dbc6;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title-large {
+  font-size: 2.8rem;
+  margin: 0;
+  color: #1e4e37;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #3c6f57;
+}
+
+nav a {
+  margin-left: 20px;
+  font-weight: 600;
+  color: #2b8a5f;
+}
+nav a:hover {
+  color: #1f6e4a;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+
+.section.alt {
+  background: #e8f6ee;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #245c42;
+}
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #cfe7d8;
+  font-size: 1.1rem;
+}
+
+/* CV Button */
+.cv-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: #2b8a5f;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.cv-btn:hover {
+  background: #23724d;
+}
+
+/* Footer */
 footer {
-  background-color: #222;
-  color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 25px 0;
+  background: #dff2e8;
+  color: #3a5f4d;
+  margin-top: 50px;
+  font-size: 0.9rem;
 }
