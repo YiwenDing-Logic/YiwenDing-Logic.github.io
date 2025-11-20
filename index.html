@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yiwen Ding | Personal Homepage</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1>Yiwen Ding</h1>
+
+  <header class="hero">
+    <div class="container hero-content">
+      <div>
+        <h1 class="title-large">Yiwen Ding</h1>
+        <p class="subtitle">PhD Student · Logic · Category Theory · Coalgebra</p>
+      </div>
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -19,32 +25,41 @@
     </div>
   </header>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="profile">
-        <img src="images/profile.jpg" alt="Yiwen Ding">
-        <p>PhD student at VU Amsterdam, specializing in polarity-based semantics and non-distributive modal logic. Interests include category theory, coalgebraic logic, and non-classical logics.</p>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          I am a PhD student at VU Amsterdam, specializing in polarity-based semantics,
+          non-distributive modal logic, and coalgebraic methods. My research connects
+          lattice theory, semantics of non-classical logics, and category theory.
+        </p>
+        <a class="cv-btn" href="files/cv.pdf" target="_blank">Download CV</a>
       </div>
-      <a class="cv-btn" href="files/cv.pdf" target="_blank">Download CV</a>
+
+      <img class="profile-img" src="images/profile.jpg" alt="Yiwen Ding">
     </div>
   </section>
 
-  <section id="projects">
+  <!-- Projects -->
+  <section id="projects" class="section alt">
     <div class="container">
       <h2>Projects</h2>
-      <ul id="project-list"></ul>
+      <ul id="project-list" class="list"></ul>
     </div>
   </section>
 
-  <section id="papers">
+  <!-- Papers -->
+  <section id="papers" class="section">
     <div class="container">
       <h2>Papers</h2>
-      <ul id="paper-list"></ul>
+      <ul id="paper-list" class="list"></ul>
     </div>
   </section>
 
-  <section id="contact">
+  <!-- Contact -->
+  <section id="contact" class="section alt">
     <div class="container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:yiwen@example.com">yiwen@example.com</a></p>
@@ -56,10 +71,11 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Yiwen Ding</p>
+      <p>&copy; 2025 Yiwen Ding — All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
