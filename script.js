@@ -1,28 +1,26 @@
-// 你的项目列表
-const projects = [
-  { title: "Coalgebraic Logic Research", link: "#" },
-  { title: "Python Logic Experiments", link: "#" },
-  { title: "GitHub Pages Academic Homepage", link: "#" }
-];
+// ----- Dark mode toggle -----
 
-// 你的论文列表
-const papers = [
-  { title: "Non-Distributive Modal Logic", link: "#" },
-  { title: "Polarity-Based Semantics", link: "#" }
-];
+const btn = document.getElementById("theme-toggle");
+const body = document.body;
 
-// 渲染项目
-const projectList = document.getElementById('project-list');
-projects.forEach(p => {
-  const li = document.createElement('li');
-  li.innerHTML = `<a href="${p.link}" target="_blank">${p.title}</a>`;
-  projectList.appendChild(li);
-});
+// load previous user preference
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.remove("light");
+  body.classList.add("dark");
+  btn.textContent = "☀️";
+}
 
-// 渲染论文
-const paperList = document.getElementById('paper-list');
-papers.forEach(p => {
-  const li = document.createElement('li');
-  li.innerHTML = `<a href="${p.link}" target="_blank">${p.title}</a>`;
-  paperList.appendChild(li);
+// button toggle
+btn.addEventListener("click", () => {
+  if (body.classList.contains("light")) {
+    body.classList.remove("light");
+    body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    btn.textContent = "☀️";
+  } else {
+    body.classList.remove("dark");
+    body.classList.add("light");
+    localStorage.setItem("theme", "light");
+    btn.textContent = "🌙";
+  }
 });
