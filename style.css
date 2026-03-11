@@ -171,6 +171,138 @@ h3 {
   background: var(--button-bg-hover);
 }
 
+/* CV page overrides */
+.cv-page .hero {
+  border-bottom-color: transparent;
+}
+
+.cv-hero-content {
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cv-hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.cv-hero-actions nav a {
+  margin-left: 0;
+  margin-right: 16px;
+}
+
+.cv-hero-actions nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cv-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cv-main {
+  padding: 40px 0 80px;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+}
+
+.cv-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cv-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.cv-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--title);
+}
+
+.cv-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-card ul li {
+  margin-bottom: 6px;
+}
+
+.cv-body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cv-section {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 26px 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.cv-section h2 {
+  margin-top: 0;
+}
+
+.cv-section .list li {
+  padding: 0;
+  border-bottom: none;
+  margin-bottom: 12px;
+}
+
+.cv-section .list li:last-child {
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--subtitle);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--title);
+  max-width: 420px;
+}
+
+@media (max-width: 960px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-hero-actions {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .cv-hero-actions nav {
+    justify-content: flex-start;
+  }
+}
+
 /* Footer */
 footer {
   text-align: center;
