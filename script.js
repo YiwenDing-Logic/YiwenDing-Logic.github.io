@@ -15,7 +15,7 @@
     document.body.classList.toggle('light', !dark);
     if (button) {
       const label = `Switch to ${dark ? 'light' : 'dark'} theme`;
-      button.textContent = dark ? '☼' : '◐';
+      button.textContent = dark ? '☀️' : '🌙';
       button.setAttribute('aria-label', label);
       button.setAttribute('title', label);
       button.hidden = false;

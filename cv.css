@@ -1,0 +1,25 @@
+/* Additional styles for the standalone CV only. */
+
+/* Small compatibility fixes; retain the original desktop layout. */
+body.dark { --subtitle: #a9d5bd; }
+[hidden] { display: none !important; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+.pub-authors, .pub-venue { margin: 4px 0; }
+.author-self { font-weight: 600; }
+.cv-page .publications > .list { list-style: decimal; padding-left: 1.5em; }
+body.dark .cv-card, body.dark .cv-section { background: var(--section-alt); }
+.cv-sidebar, .cv-body, .about-grid > div { min-width: 0; }
+.cv-card { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .hero-content { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .nav-right { width: 100%; justify-content: space-between; }
+  nav { display: flex; flex-wrap: wrap; gap: 12px; }
+  nav a { margin-left: 0; }
+  #theme-toggle { margin-left: 12px; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .profile-img { max-width: 350px; }
+  .cv-section { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body { transition: none; }
+}
