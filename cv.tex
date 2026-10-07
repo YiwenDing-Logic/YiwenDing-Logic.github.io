@@ -1,105 +1,122 @@
-% Simple academic CV (2 pages) for pdflatex
-\documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
+% Academic CV. Compile with pdflatex; bibliography checked against the homepage.
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.85in,top=0.7in,bottom=0.7in]{geometry}
+\usepackage{microtype}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{parskip}
-\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{needspace}
 \usepackage{fancyhdr}
-
+\usepackage{hyperref}
+\definecolor{linkblue}{RGB}{25,58,130}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,pdftitle={Yiwen Ding - Curriculum Vitae},pdfauthor={Yiwen Ding},pdfsubject={Academic curriculum vitae in logic}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\interlinepenalty=10000
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\scshape}{}{0pt}{}[\vspace{-3pt}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\titleformat{\subsection}{\normalsize\bfseries\itshape}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+\setlist[enumerate]{leftmargin=1.5em,label=\arabic*.,itemsep=5pt,topsep=3pt,parsep=0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=6pt,topsep=3pt,parsep=0pt}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Yiwen Ding}
-\lhead{Curriculum Vitae}
-\cfoot{\thepage}
-\setlength{\headheight}{14pt}
-
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\bfseries}{}{0em}{}
-\setlist[itemize]{leftmargin=*, itemsep=0.25em}
-\setlength{\parskip}{0.4em}
-\setlength{\parindent}{0pt}
-
+\fancyfoot[L]{\footnotesize Yiwen Ding}
+\fancyfoot[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13pt}
 \begin{document}
 \begin{center}
-  {\LARGE \textbf{Yiwen Ding}} \\
-  PhD Candidate in Logic, Vrije Universiteit Amsterdam \\
-  Email: \href{mailto:dyiwen666@gmail.com}{dyiwen666@gmail.com} \quad
-  Phone: +31 (0)6 4734 8246 \\
-  GitHub: \href{https://github.com/YiwenDing-Logic}{YiwenDing-Logic} \quad
-  Research Portal: \href{https://research.vu.nl/en/persons/yiwen-ding/}{VU Research Profile}
+{\Large\scshape Curriculum Vitae}\\[5pt]
+{\footnotesize Updated October 7, 2026}
 \end{center}
-
-\section*{About}
-I am a PhD student in the Department of Ethics, Governance and Society at Vrije Universiteit Amsterdam,
-supervised by Alessandra Palmigiano and Alexander Kurz. My research intertwines Category Theory,
-Universal Algebra and Coalgebra, and Modal Logic to explore foundational structures that support
-reliable reasoning systems, with a focus on non-distributive modal frameworks, causal Kripke semantics,
-and neighborhood models.
+\vspace{0pt}
+{\LARGE\scshape Yiwen Ding}\par
+\vspace{5pt}
+\begin{minipage}[t]{0.54\textwidth}
+PhD Candidate in Logic and Mathematics\\
+Department of Ethics, Governance and Society\\
+Vrije Universiteit Amsterdam, The Netherlands
+\end{minipage}\hfill
+\begin{minipage}[t]{0.44\textwidth}\raggedleft
+\href{mailto:dyiwen666@gmail.com}{dyiwen666@gmail.com}\\
+\href{https://yiwending-logic.github.io/}{yiwending-logic.github.io}\\
+\href{https://scholar.google.com/citations?user=UDOWR0MAAAAJ&hl=en}{Google Scholar}\quad
+\href{https://research.vu.nl/en/persons/yiwen-ding/}{VU Research Portal}
+\end{minipage}
 
 \section*{Research Interests}
-\begin{itemize}
-  \item Category Theory
-  \item Universal Algebra and Coalgebra
-  \item Logic and Artificial Intelligence
-  \item Non-distributive Modal Semantics
-  \item Causal and Neighborhood Models
-\end{itemize}
+My research lies in category theory and theoretical computer science, with particular interests in categorical algebra, universal algebra, coalgebra, and the logical foundations of artificial intelligence.
 
 \section*{Education}
 \begin{itemize}
-  \item \textbf{Ph.D. Candidate in Logic} \\
-  Vrije Universiteit Amsterdam, The Netherlands \hfill Sep 2022 -- Present \\
-  Advisor: Prof. Alessandra Palmigiano
-  \item \textbf{M.A. in Philosophy} \\
-  Shandong University, China \hfill Sep 2019 -- Jun 2022 \\
-  Advisor: Prof. Fei Liang
-  \item \textbf{B.A. in Law} \\
-  Qufu Normal University, China \hfill Sep 2015 -- Jun 2019 \\
-  Advisor: Prof. Yingkui Zhang
+\item \textbf{PhD Candidate in Logic and Mathematics}\hfill Sep. 2022 -- present\\
+Vrije Universiteit Amsterdam, The Netherlands\\
+Supervisors: Alessandra Palmigiano and Alexander Kurz
+\item \textbf{MA in Philosophy}\hfill Sep. 2019 -- Jun. 2022\\
+Shandong University, China\\
+Advisor: Fei Liang
+\item \textbf{BA in Law}\hfill Sep. 2015 -- Jun. 2019\\
+Qufu Normal University, China
 \end{itemize}
 
-\section*{Selected Publications}
-\begin{enumerate}[leftmargin=*, itemsep=0.35em]
-  \item Causal Kripke Models. R. Wang, K. Manoorkar, A. Tzimoulis, X. Wang, Yiwen Ding.
-  \textit{Synthese} 206(3): 1--36, Article 133 (2025).
-  \item Probabilistic Causal Kripke Models. K. Manoorkar, A. Tzimoulis, R. Wang, Yiwen Ding.
-  In \textit{Logic, Rationality and Interaction (LORI 2025)}, LNCS 16010.
-  \item Monotone Modal Logic Beyond Distributivity. A. Palmigiano, K. Manoorkar, R. Wang,
-  Yiwen Ding, A. Kurz. In \textit{Indian Conference on Logic and Its Applications 2025}, LNCS 15402.
-  \item Toward the van Benthem Characterization Theorem for Non-Distributive Modal Logic.
-  K. Manoorkar, M. Panettiere, R. Wang, Yiwen Ding. \textit{Advances in Modal Logic 2024}, Prague.
-  \item Causal Kripke Models. K. Manoorkar, A. Tzimoulis, R. Wang, X. Wang, Yiwen Ding.
-  \textit{Electronic Proceedings in Theoretical Computer Science} 379: 185--200 (2025).
-  \item Fuzzy Lattice-based Description Logic. K. Manoorkar, Yiwen Ding.
-  \textit{Electronic Proceedings in Theoretical Computer Science} 421: 44--63 (2025).
+\section*{Publications}
+\subsection*{Journal Articles}
+\begin{enumerate}
+\item Ruoding Wang, \textbf{Yiwen Ding}, Krishna Manoorkar, Apostolos Tzimoulis, Xiaolong Wang. Causal Kripke models. \textit{Synthese 206(3), Article 133, pp. 1--36 ; 2025}. DOI: \href{https://doi.org/10.1007/s11229-025-05223-z}{\nolinkurl{10.1007/s11229-025-05223-z}}.
+\end{enumerate}
+\subsection*{Refereed Conference Articles}
+\begin{enumerate}
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Ni Wayan Switrayni, Apostolos Tzimoulis. Hybrid Logics with Moving Names. \textit{Dynamic Logic. New Trends and Applications (DaL\'{i} 2025) ; LNCS 16472, pp. 23--39 ; 2026}. DOI: \href{https://doi.org/10.1007/978-3-032-22626-6_2}{\nolinkurl{10.1007/978-3-032-22626-6_2}}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Apostolos Tzimoulis, Ruoding Wang. Probabilistic Causal Kripke Models. \textit{Logic, Rationality, and Interaction (LORI 2025) ; LNCS 16010, pp. 51--64 ; 2026}. DOI: \href{https://doi.org/10.1007/978-981-95-2481-5_4}{\nolinkurl{10.1007/978-981-95-2481-5_4}}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Alessandra Palmigiano, Ruoding Wang. Monotone Modal Logic Beyond Distributivity. \textit{Logic and Its Applications (ICLA 2025) ; LNCS 15402, pp. 111--125 ; 2025}. DOI: \href{https://doi.org/10.1007/978-3-031-89610-1_8}{\nolinkurl{10.1007/978-3-031-89610-1_8}}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar. Fuzzy Lattice-based Description Logic. \textit{Electronic Proceedings in Theoretical Computer Science 421, pp. 44--63 ; 2025}. DOI: \href{https://doi.org/10.4204/EPTCS.421.3}{\nolinkurl{10.4204/EPTCS.421.3}}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Mattia Panettiere, Ruoding Wang. Toward the van Benthem Characterization Theorem for Non-Distributive Modal Logic. \textit{Advances in Modal Logic (AiML 2024) ; 2024}. \href{https://arxiv.org/abs/2404.05574}{arXiv:2404.05574}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Apostolos Tzimoulis, Ruoding Wang, Xiaolong Wang. Causal Kripke Models. \textit{Electronic Proceedings in Theoretical Computer Science 379, pp. 185--200 ; 2023}. DOI: \href{https://doi.org/10.4204/EPTCS.379.16}{\nolinkurl{10.4204/EPTCS.379.16}}.
+\end{enumerate}
+\needspace{8\baselineskip}
+\subsection*{Conference Abstracts}
+\begin{enumerate}
+\item \textbf{Yiwen Ding}, Alexander Kurz. Quantale-Enriched Universal Algebra: Completeness. \textit{Booklet of Abstracts, TACL 2026, p. 161 ; 2026}. \href{https://iris.unipa.it/retrieve/c1d30036-c6f7-4315-8974-d4cc712c6552/TACL\%202026\%20-\%20Booklet\%20of\%20Abstracts.pdf\#page=176}{Abstract}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Ni Wayan Switrayni. Multi-type universal algebra: Transfer of properties. \textit{TACL 2024 ; Conference abstract}. \href{https://iiia.csic.es/tacl2024/abstracts/conference/contributed/TACL_2024_paper_72.pdf}{Abstract}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Ni Wayan Switrayni. Multi-type universal algebra: categorical equivalence. \textit{TACL 2024 ; Conference abstract}. \href{https://iiia.csic.es/tacl2024/abstracts/conference/contributed/TACL_2024_paper_75.pdf}{Abstract}.
+\end{enumerate}
+\subsection*{Preprints and Manuscripts}
+\begin{enumerate}
+\item \textbf{Yiwen Ding}. Preservation and definability for the fluted fragment. \textit{2026; under review}. \href{https://arxiv.org/abs/2607.12970}{arXiv:2607.12970}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Ni Wayan Switrayni, Ruoding Wang. Defeasible Reasoning on Concepts. \textit{2024; under review}. \href{https://arxiv.org/abs/2409.04887}{arXiv:2409.04887}.
+\item \textbf{Yiwen Ding}, Krishna Manoorkar, Mattia Panettiere, Apostolos Tzimoulis, Ruoding Wang. Game semantics for lattice-based modal $\mu$-calculus. \textit{2023, revised 2024; under review}. \href{https://arxiv.org/abs/2310.13944}{arXiv:2310.13944}.
 \end{enumerate}
 
-\section*{Conference Presentations}
-\begin{itemize}
-  \item Logic, Rationality and Interaction 2025, Xi'an, China
-  \item Indian Conference on Logic and Its Applications 2025
-  \item Advances in Modal Logic 2024, Prague, Czech Republic
-  \item Topology, Algebra, and Categories in Logic 2024, Barcelona, Spain
-  \item 7th Asian Workshop on Philosophical Logic 2025, Kolkata, India
-\end{itemize}
+\section*{Talks and Conference Presentations}
+\begin{enumerate}
+\item \textit{An Invitation to Quantale-Enriched Universal Algebra}. GALAI Seminar,
+Chapman University, USA. April 29, 2026.
+\href{https://sites.google.com/chapman.edu/galai/previous-semesters/spring-2026}{Programme}.
+\item Logic, Rationality and Interaction (LORI 2025). Xi'an, China, 2025.
+\item Indian Conference on Logic and Its Applications (ICLA 2025). 2025.
+\item 7th Asian Workshop on Philosophical Logic (AWPL 2025). Kolkata, India, 2025.
+\item ESSLLI 2024 Student Session. 2024.
+\item Advances in Modal Logic (AiML 2024). Prague, Czech Republic, 2024.
+\item Topology, Algebra, and Categories in Logic (TACL 2024). Barcelona, Spain, 2024.
+\end{enumerate}
 
 \section*{Academic Visits}
 \begin{itemize}
-  \item University of the Witwatersrand, South Africa -- Jan 2023
-  \item Chapman University, USA -- Apr 2023
-  \item Chapman University, USA -- May 2024
+\item Chapman University, USA\hfill Mar. 2026
+\item Chapman University, USA\hfill Oct. 2025
+\item Chapman University, USA\hfill May 2024
+\item Chapman University, USA\hfill Apr. 2023
+\item University of the Witwatersrand, South Africa\hfill Jan. 2023
 \end{itemize}
 
-\section*{Scholarships \& Support}
-\begin{itemize}
-  \item China Scholarship Council full funding for PhD studies in the Netherlands (2022--present).
-\end{itemize}
-
-\vfill
-\begin{center}
-  \small Updated: March 11, 2026
-\end{center}
-
+\section*{Scholarships and Support}
+China Scholarship Council: full funding for PhD studies in the Netherlands
+(2022--present).
 \end{document}

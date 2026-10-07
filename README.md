@@ -3,10 +3,11 @@
 Static academic homepage for GitHub Pages. No build step or external frontend dependencies.
 
 - `index.html`: biography, publications, talks, education, and contact details.
-- `cv.html`: standalone web CV; its selected publications mirror the published works on the homepage.
+- `cv.html`: standalone web CV, including all 13 research records from the homepage.
 - `style.css`: shared responsive light/dark styles, keyboard focus, and print styles.
 - `script.js`: theme preference (with system fallback) and footer year.
-- `Yiwen_Ding_CV.pdf`: existing downloadable CV, maintained separately from the HTML pages.
+- `cv.tex`: editable LaTeX CV source.
+- `Yiwen_Ding_CV.pdf`: current two-page downloadable CV; `cv.pdf` is an identical local copy.
 
 To preview locally, run `python3 -m http.server 8000` and open `http://localhost:8000`.
 
@@ -27,4 +28,10 @@ Checked on 7 October 2026 against [Yiwen Ding's Google Scholar profile](https://
 
 Talks were drawn from the existing CV; the April 2026 talk is verified in the [GALAI seminar programme](https://sites.google.com/chapman.edu/galai/previous-semesters/spring-2026). Conference authorship alone is not treated as evidence that Yiwen delivered a talk.
 
-The downloadable PDF and LaTeX CV were not regenerated in this homepage update.
+## CV maintenance
+
+The CV was updated on 7 October 2026 using the verified records above. Its traditional academic typography and section structure were informed by [Qian Chen's CV](https://chenq9901-logic.github.io/CV-QianCHEN.pdf) (22 September 2026 version). Only Yiwen Ding's own records are included.
+
+Compile `cv.tex` with `pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp/yiwen-cv-build cv.tex` after creating the output directory. Inspect every rendered page, then copy the compiled PDF to both `Yiwen_Ding_CV.pdf` and `cv.pdf`. Keep the publication content in `cv.tex`, `cv.html`, and `index.html` consistent. LaTeX build logs and preview images belong in the temporary build directory.
+
+The homepage and web CV download buttons already point to `Yiwen_Ding_CV.pdf`; the new PDF will be served after these changes are committed, pushed, and deployed.
