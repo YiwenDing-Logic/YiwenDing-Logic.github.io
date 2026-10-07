@@ -1,26 +1,38 @@
-// ----- Dark mode toggle -----
-
-const btn = document.getElementById("theme-toggle");
-const body = document.body;
-
-// load previous user preference
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.remove("light");
-  body.classList.add("dark");
-  btn.textContent = "☀️";
-}
-
-// button toggle
-btn.addEventListener("click", () => {
-  if (body.classList.contains("light")) {
-    body.classList.remove("light");
-    body.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-    btn.textContent = "☀️";
-  } else {
-    body.classList.remove("dark");
-    body.classList.add("light");
-    localStorage.setItem("theme", "light");
-    btn.textContent = "🌙";
+(() => {
+  const button = document.getElementById('theme-toggle');
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  let preference = null;
+  try {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') preference = stored;
+  } catch (_) {
+    // Theme switching also works when browser storage is unavailable.
   }
-});
+
+  function applyTheme(theme) {
+    const dark = theme === 'dark';
+    document.body.classList.toggle('dark', dark);
+    document.body.classList.toggle('light', !dark);
+    if (button) {
+      const label = `Switch to ${dark ? 'light' : 'dark'} theme`;
+      button.textContent = dark ? '☼' : '◐';
+      button.setAttribute('aria-label', label);
+      button.setAttribute('title', label);
+      button.hidden = false;
+    }
+  }
+
+  applyTheme(preference || (systemTheme.matches ? 'dark' : 'light'));
+  systemTheme.addEventListener('change', (event) => {
+    if (!preference) applyTheme(event.matches ? 'dark' : 'light');
+  });
+  if (button) button.addEventListener('click', () => {
+    preference = document.body.classList.contains('dark') ? 'light' : 'dark';
+    applyTheme(preference);
+    try { localStorage.setItem('theme', preference); } catch (_) {}
+  });
+
+  document.querySelectorAll('[data-current-year]').forEach((element) => {
+    element.textContent = new Date().getFullYear();
+  });
+})();
