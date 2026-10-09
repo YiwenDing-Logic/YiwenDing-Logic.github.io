@@ -5,9 +5,11 @@ Static academic homepage for GitHub Pages. No build step or external frontend de
 - `index.html`: biography, publications, talks, education, and contact details.
 - `cv.html`: standalone web CV, including all 13 research records from the homepage.
 - `style.css`: shared responsive light/dark styles, keyboard focus, and print styles.
+- `cv.css`: styles specific to the web CV.
+- `images/`: website images, including the profile photo.
 - `script.js`: theme preference (with system fallback) and footer year.
 - `cv.tex`: editable LaTeX CV source.
-- `Yiwen_Ding_CV.pdf`: current two-page downloadable CV; `cv.pdf` is an identical local copy.
+- `Yiwen_Ding_CV.pdf`: the single maintained downloadable CV. Keep this filename stable so existing download links continue to work.
 
 To preview locally, run `python3 -m http.server 8000` and open `http://localhost:8000`.
 
@@ -32,6 +34,14 @@ Talks were drawn from the existing CV; the April 2026 talk is verified in the [G
 
 The CV was updated on 7 October 2026 using the verified records above. Its traditional academic typography and section structure were informed by [Qian Chen's CV](https://chenq9901-logic.github.io/CV-QianCHEN.pdf) (22 September 2026 version). Only Yiwen Ding's own records are included.
 
-Compile `cv.tex` with `pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp/yiwen-cv-build cv.tex` after creating the output directory. Inspect every rendered page, then copy the compiled PDF to both `Yiwen_Ding_CV.pdf` and `cv.pdf`. Keep the publication content in `cv.tex`, `cv.html`, and `index.html` consistent. LaTeX build logs and preview images belong in the temporary build directory.
+Compile `cv.tex` with `pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp/yiwen-cv-build cv.tex` after creating the output directory. Inspect every rendered page, then copy `/tmp/yiwen-cv-build/cv.pdf` to `Yiwen_Ding_CV.pdf`. Keep the publication content in `cv.tex`, `cv.html`, and `index.html` consistent. LaTeX build logs and preview images belong in the temporary build directory.
 
 The homepage and web CV download buttons already point to `Yiwen_Ding_CV.pdf`; the new PDF will be served after these changes are committed, pushed, and deployed.
+
+## Repository housekeeping
+
+Keep only website assets and their editable sources in this repository. Store unrelated submission templates and personal reference documents elsewhere. Commit new PDFs only when they are intended for visitors and linked from the website.
+
+Unused PDFs (`My_Personal_CV (1).pdf`, `files/cv.pdf`, and `logica_template_for_submissions.pdf`), the duplicate `cv.pdf`, and tracked LaTeX build artifacts were removed during cleanup. Their previous contents remain available in Git history; the last commit before cleanup is `53e902f`. For example, restore an old file with `git restore --source=53e902f -- "My_Personal_CV (1).pdf"`. Removed PDF URLs will no longer be served after deployment; the current `Yiwen_Ding_CV.pdf` download URL is unchanged.
+
+The `.gitignore` excludes LaTeX build artifacts, local build output, and macOS metadata. PDFs are not globally ignored, so future publication PDFs can still be added deliberately.

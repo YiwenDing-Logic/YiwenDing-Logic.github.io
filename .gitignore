@@ -1,0 +1,22 @@
+# macOS metadata
+.DS_Store
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Local CV compiler output; publish only Yiwen_Ding_CV.pdf
+/cv.pdf
+
+# Local website/build output
+/_site/
+/.jekyll-cache/
+/.sass-cache/
+/build/
