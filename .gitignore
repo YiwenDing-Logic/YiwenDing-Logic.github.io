@@ -1,6 +1,14 @@
 # macOS metadata
 .DS_Store
 
+# Personal editor settings
+/.vscode/
+
+# Retired CV copies and unrelated reference documents
+/My_Personal_CV (1).pdf
+/files/cv.pdf
+/logica_template_for_submissions.pdf
+
 # LaTeX intermediate files
 *.aux
 *.log
