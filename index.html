@@ -1,173 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yiwen Ding, PhD candidate at Vrije Universiteit Amsterdam. Research in logic, category theory, and theoretical computer science.">
+  <meta name="color-scheme" content="light dark">
   <title>Yiwen Ding | Personal Homepage</title>
-  <link rel="stylesheet" href="style.css?v=20261007-original">
+  <link rel="stylesheet" href="style.css?v=20261102-glass-1">
 </head>
-
-<body class="light">
-
-  <header class="hero">
-    <div class="container hero-content">
-      <div>
-        <h1 class="title-small">Yiwen Ding | 丁宜文</h1>
-      </div>
-
+<body class="light" data-page="about">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="site-name" href="index.html">Yiwen Ding <span lang="zh">丁宜文</span></a>
       <div class="nav-right">
-        <nav>
-          <a href="#about">About</a>
-          <a href="#publications">Publications</a>
-          <a href="#talks">Talks</a>
-          <a href="#contact">Contact</a>
+        <nav aria-label="Main navigation">
+          <a href="index.html" aria-current="page">About</a>
+          <a href="publications.html">Publications</a>
+          <a href="talks.html">Talks</a>
+          <a href="contact.html">Contact</a>
         </nav>
-
-        <!-- Dark Mode Toggle -->
-        <button id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme">🌙</button>
+        <button id="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme" hidden>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        </button>
       </div>
     </div>
   </header>
-
-  <!-- About -->
+  <main id="main-content" tabindex="-1">
   <section id="about" class="section">
     <div class="container about-grid">
       <div>
-        <h2>About Me</h2>
+        <h1>About Me</h1>
         <p>
           I am a PhD student in the Department of Ethics, Governance and Society (EGS) at the Vrije Universiteit Amsterdam, under the supervision of <a href="https://research.vu.nl/en/persons/alessandra-palmigiano" target="_blank" rel="noopener noreferrer">Alessandra Palmigiano</a> and <a href="https://alexhkurz.github.io/" target="_blank" rel="noopener noreferrer">Alexander Kurz</a>.
         </p>
         <p>My main research interests lie in category theory and theoretical computer science, especially in:</p>
-        <ul>
+        <ul class="research-interests">
           <li>logic in computer science,</li>
           <li>categorical algebra,</li>
           <li>universal algebra and coalgebra,</li>
           <li>the logical foundations of artificial intelligence.</li>
         </ul>
-        <h3>Education Background</h3>
-        <ul class="list">
-          <li>PhD Candidate in Logic and Mathematics (Sep 2022 — Present), Vrije Universiteit Amsterdam, The Netherlands. Supervisors: Prof. Alessandra Palmigiano and Prof. Alexander Kurz.</li>
-          <li>M.A. in Philosophy (Sep 2019 — Jun 2022), Shandong University, China. Advisor: Prof. Fei Liang.</li>
-          <li>B.A. in Law (Sep 2015 — Jun 2019), Qufu Normal University, China.</li>
+        <h2>Education Background</h2>
+        <ul class="list education-list">
+          <li>
+            <span class="education-date">Sep 2022 — Present</span>
+            <div>
+              <strong>PhD Candidate in Logic and Mathematics</strong>
+              <span>Vrije Universiteit Amsterdam, The Netherlands.</span>
+              <span class="education-detail">Supervisors: Prof. Alessandra Palmigiano and Prof. Alexander Kurz.</span>
+            </div>
+          </li>
+          <li>
+            <span class="education-date">Sep 2019 — Jun 2022</span>
+            <div>
+              <strong>M.A. in Philosophy</strong>
+              <span>Shandong University, China.</span>
+              <span class="education-detail">Advisor: Prof. Fei Liang.</span>
+            </div>
+          </li>
+          <li>
+            <span class="education-date">Sep 2015 — Jun 2019</span>
+            <div>
+              <strong>B.A. in Law</strong>
+              <span>Qufu Normal University, China.</span>
+            </div>
+          </li>
         </ul>
         <a class="cv-btn" href="Yiwen_Ding_CV.pdf" download>Download CV</a>
       </div>
 
-      <img class="profile-img" src="images/profile.jpg" alt="Yiwen Ding">
+      <figure class="photo-gallery" aria-label="Photos of Yiwen Ding">
+        <div class="photo-stage">
+        <div class="photo-frame" id="profile-slide">
+          <img class="profile-img" src="images/profile.jpg" alt="Yiwen Ding in a snowy mountain landscape" width="510" height="537" decoding="async">
+        </div>
+        <div class="photo-controls" hidden>
+          <button class="photo-arrow" type="button" data-photo-prev aria-label="Previous photo" aria-controls="profile-slide">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+          </button>
+          <span class="photo-count" aria-live="polite" aria-atomic="true"></span>
+          <button class="photo-arrow" type="button" data-photo-next aria-label="Next photo" aria-controls="profile-slide">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg>
+          </button>
+        </div>
+        </div>
+        <figcaption class="photo-caption" hidden></figcaption>
+      </figure>
     </div>
   </section>
-
-  <!-- Publications -->
-  <section id="publications" class="section alt">
-    <div class="container">
-      <h2>Publications</h2>
-      <h3>Journal Articles</h3>
-      <ul class="list">
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s11229-025-05223-z">Causal Kripke models</a></strong><br>
-          with R. Wang, K. Manoorkar, A. Tzimoulis and X. Wang. <em>Synthese 206(3), Article 133, pp. 1–36 · 2025</em>
-        </li>
-      </ul>
-
-      <h3>Conference Proceedings</h3>
-      <ul id="publication-list" class="list">
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-3-032-22626-6_2">Hybrid Logics with Moving Names</a></strong><br>
-          with K. Manoorkar, N. W. Switrayni and A. Tzimoulis. <em>Dynamic Logic. New Trends and Applications (DaLí 2025) · LNCS 16472, pp. 23–39 · 2026</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-95-2481-5_4">Probabilistic Causal Kripke Models</a></strong><br>
-          with K. Manoorkar, A. Tzimoulis and R. Wang. <em>Logic, Rationality, and Interaction (LORI 2025) · LNCS 16010, pp. 51–64 · 2026</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-3-031-89610-1_8">Monotone Modal Logic Beyond Distributivity</a></strong><br>
-          with K. Manoorkar, A. Palmigiano and R. Wang. <em>Logic and Its Applications (ICLA 2025) · LNCS 15402, pp. 111–125 · 2025</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.4204/EPTCS.421.3">Fuzzy Lattice-based Description Logic</a></strong><br>
-          with K. Manoorkar. <em>Electronic Proceedings in Theoretical Computer Science 421, pp. 44–63 · 2025</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2404.05574">Toward the van Benthem Characterization Theorem for Non-Distributive Modal Logic</a></strong><br>
-          with K. Manoorkar, M. Panettiere and R. Wang. <em>Advances in Modal Logic (AiML 2024) · 2024</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.4204/EPTCS.379.16">Causal Kripke Models</a></strong><br>
-          with K. Manoorkar, A. Tzimoulis, R. Wang and X. Wang. <em>Electronic Proceedings in Theoretical Computer Science 379, pp. 185–200 · 2023</em>
-        </li>
-      </ul>
-
-      <h3>Under Review</h3>
-      <ul class="list">
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2607.12970">Preservation and definability for the fluted fragment</a></strong><br>
-          Yiwen Ding. <em>arXiv:2607.12970 · 2026</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2409.04887">Defeasible Reasoning on Concepts</a></strong><br>
-          with K. Manoorkar, N. W. Switrayni and R. Wang. <em>arXiv:2409.04887 · 2024</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2310.13944">Game semantics for lattice-based modal μ-calculus</a></strong><br>
-          with K. Manoorkar, M. Panettiere, A. Tzimoulis and R. Wang. <em>arXiv:2310.13944 · 2023, revised 2024</em>
-        </li>
-      </ul>
-
-      <h3>Conference Abstracts</h3>
-      <ul class="list">
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://iris.unipa.it/retrieve/c1d30036-c6f7-4315-8974-d4cc712c6552/TACL%202026%20-%20Booklet%20of%20Abstracts.pdf#page=176">Quantale-Enriched Universal Algebra: Completeness</a></strong><br>
-          with A. Kurz. <em>Booklet of Abstracts, TACL 2026, p. 161 · 2026</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://iiia.csic.es/tacl2024/abstracts/conference/contributed/TACL_2024_paper_72.pdf">Multi-type universal algebra: Transfer of properties</a></strong><br>
-          with K. Manoorkar and N. W. Switrayni. <em>TACL 2024 · Conference abstract</em>
-        </li>
-        <li>
-          <strong><a target="_blank" rel="noopener noreferrer" href="https://iiia.csic.es/tacl2024/abstracts/conference/contributed/TACL_2024_paper_75.pdf">Multi-type universal algebra: categorical equivalence</a></strong><br>
-          with K. Manoorkar and N. W. Switrayni. <em>TACL 2024 · Conference abstract</em>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- talks -->
-  <section id="talks" class="section">
-    <div class="container">
-      <h2>Talks</h2>
-      <ul id="talk-list" class="list">
-        <li><a href="https://sites.google.com/chapman.edu/galai/previous-semesters/spring-2026">An Invitation to Quantale-Enriched Universal Algebra</a>. GALAI Seminar · Chapman University · 29 April 2026</li>
-        <li>Logic, Rationality and Interaction. LORI · Xi’an, China · 2025</li>
-        <li>Indian Conference on Logic and Its Applications. ICLA · 2025</li>
-        <li>7th Asian Workshop on Philosophical Logic. AWPL · Kolkata, India · 2025</li>
-        <li>ESSLLI 2024 Student Session · Leuven, Belgium · 2024</li>
-        <li>Advances in Modal Logic. AiML · Prague, Czech Republic · 2024</li>
-        <li>Topology, Algebra, and Categories in Logic. TACL · Barcelona, Spain · 2024</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section alt">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:dyiwen666@gmail.com">dyiwen666@gmail.com</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.com/citations?user=UDOWR0MAAAAJ&amp;hl=en">Research profile</a></p>
-      <p>ResearchGate: <a href="https://www.researchgate.net/profile/Yiwen-Ding-14" target="_blank" rel="noopener noreferrer">Research profile</a></p>
-      <p>ORCID: <a href="https://orcid.org/0009-0000-6447-6479" target="_blank" rel="noopener noreferrer">0009-0000-6447-6479</a></p>
-      <p>GitHub: <a href="https://github.com/YiwenDing-Logic" target="_blank" rel="noopener noreferrer">YiwenDing-Logic</a></p>
-      <p>VU Research Portal: <a href="https://research.vu.nl/en/persons/yiwen-ding/" target="_blank" rel="noopener noreferrer">Research profile</a></p>
-    </div>
-  </section>
-
+  </main>
   <footer>
     <div class="container">
       <p>&copy; <span data-current-year>2026</span> Yiwen Ding — All rights reserved.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
-
+  <script src="photos.js?v=20261102-glass-1"></script>
+  <script src="script.js?v=20261102-glass-1"></script>
 </body>
 </html>
