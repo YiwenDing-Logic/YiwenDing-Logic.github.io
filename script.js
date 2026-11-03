@@ -48,10 +48,6 @@
     try { localStorage.setItem('theme', preference); } catch (_) {}
   });
 
-  document.querySelectorAll('[data-current-year]').forEach((element) => {
-    element.textContent = new Date().getFullYear();
-  });
-
   const gallery = document.querySelector('.photo-gallery');
   if (!gallery) return;
 
